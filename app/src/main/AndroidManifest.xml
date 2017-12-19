@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="compsci290.edu.duke.tutorfire">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="compsci290.edu.duke.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".StudentModeActivities.StudentMainActivity"
+            android:label="Student"/>
+        <activity android:name=".StudentModeActivities.MyTutorsListActivity"
+            android:label="My Tutors"/>
+        <activity
+            android:name=".TutorModeActivities.TutorMainActivity"
+            android:label="@string/title_activity_tutor_main"
+            />
+        <activity android:name=".TutorModeActivities.MyStudentsListActivity"
+            android:label="My Students"/>
+        <activity android:name=".StudentModeActivities.FindTutorsActivity"
+            android:label="Find Tutor"/>
+        <activity android:name=".StudentModeActivities.FoundTutorsActivity"
+            android:label="Find Tutor"/>
+        <activity android:name=".TutorModeActivities.TutorClassesListActivity"
+            android:label="My Courses"/>
+        <activity
+            android:name=".TutorModeActivities.AddCourseActivity"
+            android:label="@string/title_activity_add_course"
+            />
+        <activity
+            android:name=".TimeSelector.ScreenSlidePagerActivity"
+            android:label="@string/title_activity_screen_slide_pager"
+            />
+        <activity android:name=".SharedActivities.ProfileActivity"
+            android:label="Profile"/>
+        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

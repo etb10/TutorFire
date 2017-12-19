@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="compsci290.edu.duke.tutorfire.TutorModeActivities.TutorMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/ic_account_circle_white_36dp"
+            app:border_color="?attr/colorControlHighlight"
+            app:border_width="2dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/profileNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="FIRST LAST"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_weight="6">
+
+        <Button
+            android:id="@+id/myTutorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="?attr/colorPrimary"
+            android:onClick="beginMyTutorListActivity"
+            android:text="My Tutors" />
+
+        <Button
+            android:id="@+id/findTutorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/myTutorsButton"
+            android:layout_below="@+id/myTutorsButton"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:background="?attr/colorPrimary"
+            android:onClick="beginFindTutorsActivity"
+            android:text="Find a Tutor" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="compsci290.edu.duke.tutorfire.TutorModeActivities.TutorMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/ic_account_circle_black_36dp"
+            app:border_color="?attr/colorControlHighlight"
+            app:border_width="2dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/profileNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="FIRST LAST"
+            android:textSize="24sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/ratingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/profileNameView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="No rating yet" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_weight="6">
+
+        <Button
+            android:id="@+id/TutorsStudentsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="?attr/colorPrimary"
+            android:onClick="beginMyStudentListActivity"
+            android:text="My Students" />
+
+        <Button
+            android:id="@+id/TutorsCoursesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/TutorsStudentsButton"
+            android:layout_below="@id/TutorsStudentsButton"
+            android:layout_marginTop="20dp"
+            android:background="?attr/colorPrimary"
+            android:onClick="beginMyCoursesListActivity"
+            android:text="My Courses" />
+
+
+        <Button
+            android:id="@+id/ScreenScrollActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/TutorsCoursesButton"
+            android:layout_below="@id/TutorsCoursesButton"
+            android:layout_marginTop="20dp"
+            android:background="?attr/colorPrimary"
+            android:onClick="beginScreenSlidePagerActivity"
+            android:text="My Times" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

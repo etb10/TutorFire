@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/studentProfileImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_account_circle_black_36dp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/studentProfileNameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentProfileImageView"/>
+
+    <ListView
+        android:id="@+id/studentProfileCoursesListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentProfileNameView"/>
+
+    <Button
+        android:id="@+id/StudentProfileChatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:layout_below="@id/studentProfileCoursesListView"
+        android:onClick="goToChat">
+    </Button>
+
+    <!--<Button-->
+        <!--android:id="@+id/addToMyTutorsButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Add to My Tutors"-->
+        <!--android:layout_below="@+id/chatButton"-->
+        <!--android:onClick="beginAddingTutor">-->
+    <!--</Button>-->
+
+</RelativeLayout>
+

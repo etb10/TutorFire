@@ -1,0 +1,14 @@
+How we tested our app:
+While developing our app, we tested new methods by using a lot of Log statements. For example,
+to make sure that we could access the web service correctly, we would print the JSON response
+received from the web server, as well as logging what happens when we parse this response.
+For testing new functionality, such as the chat, we would run the app on our phones and make
+sure the new feature works. For example, we tested the chat feature by having two phones run
+the app and sending messages between the two.
+
+Harrison wrote a JUnit test for the FreeTimesAdapter class, to verify that Time objects each
+representing one hour slots can be converted into Time objects of longer periods of time
+when possible.
+
+Lin Lin wrote JUnit tests to test the JSONParser classes.
+

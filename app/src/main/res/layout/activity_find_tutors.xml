@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="compsci290.edu.duke.tutorfire.StudentModeActivities.FindTutorsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/subjectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="?attr/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/subjectGuideView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Subject: "
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/subject_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2.5"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/courseNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="?attr/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/courseNumberGuideView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Number:"
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/course_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2.5"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="?attr/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/dayGuideView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Day:"
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/day_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2.5"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/startTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="?attr/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/startTimeGuideView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Start Time:"
+                android:textAlignment="viewStart"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/start_time_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2.5"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/durationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="?android:attr/colorPrimary"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/durationGuideView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="Duration: "
+                android:textAlignment="viewStart"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/duration_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="2.5"></Spinner>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:baselineAlignBottom="false"
+        android:onClick="beginFoundTutorsActivity"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

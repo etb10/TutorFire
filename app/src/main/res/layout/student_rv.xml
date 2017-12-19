@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="350px"
+    android:layout_marginLeft="@dimen/cardview_default_radius"
+    android:layout_marginRight="@dimen/cardview_default_radius"
+    android:layout_marginTop="@dimen/cardview_default_radius"
+    android:background="?attr/colorPrimaryDark"
+    app:cardBackgroundColor="?attr/colorPrimaryDark"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/studentProfileImageView"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_account_circle_black_36dp"
+            card_view:border_color="?attr/colorControlHighlight"
+            card_view:border_width="2dp" />
+
+        <TextView
+            android:id="@+id/student_RV_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/studentProfileImageView"
+            android:layout_marginLeft="20px"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/studentProfileImageView"
+            android:text="Student_Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/student_RV_courses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/student_RV_name"
+            android:layout_below="@id/student_RV_name"
+            android:text="courses"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/studentProfile_chatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:background="@color/cardview_shadow_end_color"
+            app:srcCompat="@android:drawable/sym_action_chat" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
